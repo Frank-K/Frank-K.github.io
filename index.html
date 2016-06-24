@@ -18,35 +18,106 @@
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
 					
-					 anchors: ['start-info', 'about-info', 'service-info', 'actual-info', 'contact-info'],
+					anchors: ['start-info', 'about-info', 'service-info', 'actual-info'],
 					menu: '#menu',
-					scrollingSpeed: 1000
+					scrollingSpeed: 1000,
+					navigation: true,
+					navigationPosition: 'right',
+					navigationTooltips: ['First', 'Second', 'Third', 'Fourth']
 				});
 			});
 		</script>
 
 		<style>
+		@import url(https://fonts.googleapis.com/css?family=Roboto:300,700,400);
+
 			#home {
 				background-image: url(01_blured_dark.jpg);
 				background-position: center;
-				text-align: center;
+				
 			}
 
 			.section{
 				background-size: cover;
+				text-align: center;
 			}
+
+			#hello {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-size: 2.8em;
+				margin-bottom: 1px;
+				margin-top: -100px;
+			}
+
+			#name {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 700;
+				font-size: 6em;
+				margin-top: 0.00001em;
+				margin-bottom: 20px;
+			}
+
+			#underline {
+				text-decoration: underline;
+				white-space: pre;
+				margin-top: -50px;
+				margin-bottom: 10px;
+			}
+
+			#minBio {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 400;
+				font-size: 1.7em;
+				margin-top: 10px;
+			}
+
 		</style>
 	</head>
 
 	<body>
 		<div id="fullpage">
     		<div class="section" id="home">
-    			<p> Hello, my name is </p> 
-    			<p> Frank Karunaratna </p>
+    			<h1 id = 'hello'> Hi, my name is </h1> 
+    			<h4 id = 'name'> Frank Karunaratna </h4>
+    			<h1 id = 'underline'>                                                                                                   </h1>
+    			<h2 id = 'minBio'> I'm a <strong>Computer Science</strong> major at the University of Toronto </h2>
     		</div>
     		<div class="section">Some section</div>
     		<div class="section">Some section</div>
     		<div class="section">Some section</div>
+		</div>
+
+		<div id = 'fp-nav' class = 'right'>
+			<ul>
+				<li>
+					<a href="#start-info" class="active">
+						<span></span>
+					</a>
+					<div class="fp-tooltip right">First</div>
+				</li>
+
+				<li>
+					<a href="#about-info" class="active">
+						<span></span>
+					</a>
+					<div class="fp-tooltip right">Second</div>
+				</li>
+
+				<li>
+					<a href="#service-info" class="active">
+						<span></span>
+					</a>
+					<div class="fp-tooltip right">Third</div>
+				</li>
+
+				<li>
+					<a href="#actual-info" class="active">
+						<span></span>
+					</a>
+					<div class="fp-tooltip right">Fourth</div>
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>
