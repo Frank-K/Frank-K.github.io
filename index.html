@@ -33,7 +33,7 @@
 		@import url(https://fonts.googleapis.com/css?family=Roboto:300,700,400);
 
 			#home {
-				background-image: url(01_blured_dark.jpg);
+				background-image: url(background_45o.png);
 				background-position: center;
 				
 			}
@@ -49,6 +49,7 @@
 				font-size: 2.8em;
 				margin-bottom: 1px;
 				margin-top: -100px;
+				color: white;
 			}
 
 			#name {
@@ -57,6 +58,7 @@
 				font-size: 6em;
 				margin-top: 0.00001em;
 				margin-bottom: 20px;
+				color: white;
 			}
 
 			#underline {
@@ -64,6 +66,7 @@
 				white-space: pre;
 				margin-top: -50px;
 				margin-bottom: 10px;
+				color: white;
 			}
 
 			#minBio {
@@ -71,6 +74,50 @@
 				font-weight: 400;
 				font-size: 1.7em;
 				margin-top: 10px;
+				color: white;
+			}
+
+			.title {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-size: 2.8em;
+			}
+
+			.copy {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-size: 1.5em;
+			}
+
+			.subTitle {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 400;
+				font-size: 1.5em;
+			}
+
+			table.center {
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			#gpa {
+				font-family: 'Roboto', sans-serif;
+				font-size: 2.2em;
+				font-weight: 300;
+			}
+
+			.cells {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-size: 1.4em;
+				padding-top: 30px;
+				padding-bottom: 40px;
+			}
+
+			#star {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-size: 1em;
 			}
 
 		</style>
@@ -84,9 +131,70 @@
     			<h1 id = 'underline' class='animated fadeIn'>                                                                                                   </h1>
     			<h2 id = 'minBio' class='animated fadeInUpBig'> I'm a <strong>Computer Science</strong> student at the University of Toronto </h2>
     		</div>
-    		<div class="section">Some section</div>
-    		<div class="section">Some section</div>
-    		<div class="section">Some section</div>
+    		<div class="section">
+    			<h1 class="title">About Me</h1>
+    			<p class="copy"> I am a software developer currently attending the University of Toronto. I'm in my second year and eager to learn more.</p>
+    			<p class="copy"> If you want to talk send me an email at frank.karunaratna@gmail.com.</p>
+    			<p class="subTitle"> I am also looking for an internship for Summer 2017. If you are interested in hiring me please take a look at my portfolio below. </p>
+    		</div>
+    		<div class="section">
+    			<h1 class="title">Academics</h1>
+    			<table class="center" style="text-align: left;">
+    				<tr>
+    					<th class="subTitle">CS Courses</th>
+    					<th class="subTitle">Grades</th>
+    				</tr>
+    				<tr class="cells">
+    					<td>CSC108 - Introduction to Computer Programming</td>
+    					<td>A+</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>CSC148 - Introduction to Computer Science</td>
+    					<td>A</td>
+    				</tr>
+    				<tr class="cells">
+    					<td style="padding-right: 20px;">CSC165 - Mathematical Expression and Reasoning for Computer Science</td>
+    					<td>A</td>
+    				</tr>
+    				<tr>
+    					<th class="subTitle">Other Courses</th>
+    					<th></th>
+    				</tr>
+    				<tr class="cells">
+    					<td>MAT135 - Calculus 1(A)</td>
+    					<td>A-</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>MAT136 - Calculus 1(B)</td>
+    					<td>A-</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>AST101 - The Sun and It's Neighbours</td>
+    					<td>A+</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>HPS100 - Introduction to History and Philosophy of Science</td>
+    					<td>A</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>PSY100 - Introductory Psychology</td>
+    					<td>A+</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>PCL102 - The Art of Drug Discovery</td>
+    					<td>A+</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>ENV200 - Assessing Global Chance: Science and the Environment</td>
+    					<td>CR*</td>
+    				</tr>
+    			</table>
+    			<p id="gpa">Current cGPA: 3.93</p>
+    			<p id="star">*CR-Credit (This course was assessed on a credit/no credit basis, no mark was received)</p>
+    		</div>
+    		<div class="section">
+    			<h1 class="title">Projects</h1>
+    		</div>
 		</div>
 
 		<div id = 'fp-nav' class = 'right'>
