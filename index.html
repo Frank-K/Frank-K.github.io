@@ -19,12 +19,38 @@
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
 					
-					anchors: ['start-info', 'about-info', 'service-info', 'actual-info'],
+					anchors: ['Home', 'Intro', 'Academics', 'Projects'],
 					menu: '#menu',
 					scrollingSpeed: 800,
 					navigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['First', 'Second', 'Third', 'Fourth']
+					navigationTooltips: ['Home', 'Intro', 'Academics', 'Projects'],
+
+					onLeave: function(index, nextIndex, direction){
+						var leavingSection = $(this);
+
+						if(index == 1 && nextIndex == 2){
+							$('#one, #two, #three').addClass('animated fadeInDownBig');
+						
+							$('#me').addClass('animated zoomIn');
+							
+							$('#four').addClass('animated fadeInUpBig');
+							console.log('hello');
+						} else if (index == 2 && nextIndex == 3){
+							$('#five').addClass('animated fadeInDownBig');
+							$('#six').addClass('animated zoomIn');
+							$('#gpa').addClass('animated fadeInUpBig');
+							$('#star').addClass('animated fadeInUpBig');
+						} else if (index == 3 && nextIndex == 4){
+							$('#seven').addClass('animated fadeInDownBig');
+							$('#img1').addClass('animated fadeInLeftBig');
+							$('#text1').addClass('animated fadeInRightBig');
+							$('#img2').addClass('animated fadeInLeftBig').css('animation-delay', '.25s');
+							$('#text2').addClass('animated fadeInRightBig').css('animation-delay', '.25s');
+							$('#img3').addClass('animated fadeInLeftBig').css('animation-delay', '.5s');
+							$('#text3').addClass('animated fadeInRightBig').css('animation-delay', '.5s');
+						}
+					}
 				});
 			});
 		</script>
@@ -32,7 +58,7 @@
 		<style>
 		@import url(https://fonts.googleapis.com/css?family=Roboto:300,700,400);
 
-			#home {
+			#homee {
 				background-image: url(background_45o.png);
 				background-position: center;
 				
@@ -81,6 +107,7 @@
 				font-family: 'Roboto', sans-serif;
 				font-weight: 300;
 				font-size: 2.8em;
+				font-size: bold;
 			}
 
 			.copy {
@@ -120,29 +147,103 @@
 				font-size: 1em;
 			}
 
+			.images {
+				width: 17em;
+				height: 10em;
+			}
+
+			.images2 {
+				width: 75%;
+				height: 75%;
+			}
+
+			#button {
+				background-color: none;
+				color: white;
+				border: 2px solid white;
+				padding: 16px 32px;
+				text-align: center;
+				display: inline-block;
+				font-size: 20px;
+				margin: 4px 2px;
+				-webkit-transition-duration: 0.5s;
+				transition-duration: 0.5s;
+				cursor: pointer;
+
+				font-family: 'Roboto', serif;
+				font-weight: 400;
+				text-decoration: none;
+				font-style: bold;
+			}
+
+			#button:hover {
+				background-color: none;
+				border: 2px solid #b3b3b3;
+				color: #b3b3b3;
+				font-family: 'Roboto', serif;
+				font-weight: 400;
+			}
+
+			#me {
+				height: 15em;
+				width: 15em;
+			}
+
+			.gitImage {
+				height: 2em;
+				width: 2em;
+				-webkit-transition: opacity 1.1s ease;
+				transition: opacity 1.1s ease;
+			}
+
+			.gitImage:hover {
+				content: url('PNG/GitHub-Mark-64px-white.png');
+				height: 2em;
+				width: 2em;
+				-webkit-transition: opacity 1.1s ease;
+				transition: opacity 1.1s ease;
+			}
+
 		</style>
 	</head>
 
 	<body>
 		<div id="fullpage">
-    		<div class="section" id="home">
+    		<div class="section" id="homee">
     			<h1 id = 'hello' class='animated fadeInDownBig'> Hi, my name is </h1> 
     			<h4 id = 'name' class='animated fadeInDownBig'> Frank Karunaratna </h4>
     			<h1 id = 'underline' class='animated fadeIn'>                                                                                                   </h1>
     			<h2 id = 'minBio' class='animated fadeInUpBig'> I'm a <strong>Computer Science</strong> student at the University of Toronto </h2>
-    		</div>
-    		<div class="section">
-    			<h1 class="title">About Me</h1>
-    			<p class="copy"> I am a software developer currently attending the University of Toronto. I'm in my second year and eager to learn more.</p>
-    			<p class="copy"> If you want to talk send me an email at frank.karunaratna@gmail.com.</p>
-    			<p class="subTitle"> I am also looking for an internship for Summer 2017. If you are interested in hiring me please take a look at my portfolio below. </p>
-    		</div>
-    		<div class="section">
-    			<h1 class="title">Academics</h1>
-    			<table class="center" style="text-align: left;">
+
+    			<table class="center">
     				<tr>
-    					<th class="subTitle">CS Courses</th>
-    					<th class="subTitle">Grades</th>
+    					<th>
+    						<a href="#Intro" id="button">About Me</a>
+    					</th>
+    					<th>
+    						<a href="#Academics" id="button">Academics</a>
+    					</th>
+    					<th>
+    						<a href="#Projects" id="button">Projects</a>
+    					</th>
+    				</tr>
+    			</table>
+    			
+    		</div>
+    		<div class="section">
+    			<h1 id='one' class="title">About Me</h1>
+    			<p id='two' class="copy"> I am a software developer currently attending the University of Toronto. I'm in my second year and eager to learn more.</p>
+    			<p id='three'class="copy"> If you want to talk send me an email at frank.karunaratna@gmail.com.</p>
+    			
+    			<img id='me' src="me2.png">
+    			<p  id='four' class="subTitle"><b>I am also looking for an internship for Summer 2017. If you are interested in hiring me please take a look at my portfolio below.</b></p>
+    		</div>
+    		<div class="section">
+    			<h1 id='five' class="title">Academics</h1>
+    			<table id ='six' class="center" style="text-align: left;">
+    				<tr>
+    					<th class="subTitle"><b>CS Courses</b></th>
+    					<th class="subTitle"><b>Grades</b></th>
     				</tr>
     				<tr class="cells">
     					<td>CSC108 - Introduction to Computer Programming</td>
@@ -157,7 +258,7 @@
     					<td>A</td>
     				</tr>
     				<tr>
-    					<th class="subTitle">Other Courses</th>
+    					<th class="subTitle"><b>Other Courses</b></th>
     					<th></th>
     				</tr>
     				<tr class="cells">
@@ -169,12 +270,12 @@
     					<td>A-</td>
     				</tr>
     				<tr class="cells">
-    					<td>AST101 - The Sun and It's Neighbours</td>
-    					<td>A+</td>
-    				</tr>
-    				<tr class="cells">
     					<td>HPS100 - Introduction to History and Philosophy of Science</td>
     					<td>A</td>
+    				</tr>
+    				<tr class="cells">
+    					<td>AST101 - The Sun and It's Neighbours</td>
+    					<td>A+</td>
     				</tr>
     				<tr class="cells">
     					<td>PSY100 - Introductory Psychology</td>
@@ -185,7 +286,7 @@
     					<td>A+</td>
     				</tr>
     				<tr class="cells">
-    					<td>ENV200 - Assessing Global Chance: Science and the Environment</td>
+    					<td>ENV200 - Assessing Global Change: Science and the Environment</td>
     					<td>CR*</td>
     				</tr>
     			</table>
@@ -193,14 +294,44 @@
     			<p id="star">*CR-Credit (This course was assessed on a credit/no credit basis, no mark was received)</p>
     		</div>
     		<div class="section">
-    			<h1 class="title">Projects</h1>
+    			<h1 id="seven" class="title">Projects</h1>
+    			<table class="center" style="text-align: left;">
+    				<tr>
+    					<td id="img1"><img src="project1.png" class="images2" align="right"></td>
+    					<td id="text1" style="padding-left: 20px;">
+    						<span class="subTitle"><b>build upon</b> - Website</span><br>
+    						<span class="cells">Users enter UofT courses they have <br>
+    						taken and the tool suggests other courses to take. <br>
+    						HTML/CSS/JS</span><br>
+    						<a href="http://www.jakecooper.me/"><img class="gitImage" alt="GitHub Repository" src="PNG/GitHub-Mark-64px.png"></a>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td id="img2"><img src="project22.png" class="images2" align="right"></td>
+    					<td id="text2" style="padding-left: 20px;">
+    						<span class="subTitle"><b>RickRollMeNot</b> - Chrome Extension</span><br>
+    						<span class="cells">Alerts the user when they are about to be rickroll'd.<br>
+    						Uses the Chrome API to store the number of links checked.<br>
+    						HTML/CSS/JS + Chrome API</span><br>
+    						<img class="gitImage" alt="GitHub Repository" src="PNG/GitHub-Mark-64px.png">
+    					</td>
+    				</tr>
+    				<tr>
+    					<td id="img3"><img src="project3_2.png" class="images2" align="right"></td>
+    					<td id="text3" style="padding-left: 20px;">
+    						<span class="subTitle"><b>CourseCodeBot</b> - Reddit bot</span><br>
+    						<span class="cells">Searches for course codes in r/UofT and posts<br>
+    						course names with descriptions.<br>
+    						Python + PRAW API</span><br>
+    						<img class="gitImage" alt="GitHub Repository" src="PNG/GitHub-Mark-64px.png">
+    					</td>
+    				</tr>
+    			</table>
     		</div>
 		</div>
 
 		<div id = 'fp-nav' class = 'right'>
-			<ul>
-				
-			</ul>
+			<ul></ul>
 		</div>
 	</body>
 </html>
