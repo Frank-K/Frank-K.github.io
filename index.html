@@ -204,6 +204,73 @@
 				transition: opacity 1.1s ease;
 			}
 
+
+			.cf {
+				position: relative;
+				height: 2em;
+				width: 2em;
+				padding-left: 2px;
+			}
+
+			.cf img{
+				position: absolute;
+				height: 2em;
+				width: 2em;
+				transition: opacity .4s ease-out;
+			}
+
+			.cf img.top:hover{
+				opacity: 0;
+
+			}
+
+			.cf img.bottom{
+				border: 2px solid black;
+			}
+
+			.cf img.top{
+				border: 2px solid white;
+			}
+
+			.projectLink {
+				padding-left: 45px;
+				padding-top: 5px;
+			}
+
+			.siteButton{
+				-webkit-transition-duration: 0.4s; /* Safari */
+    			transition-duration: 0.4s;
+    			cursor: pointer;
+    			background-color: #737373;
+    			color: white;
+    			border: 2px solid #737373;
+    			font-family: 'Roboto', serif;
+				font-weight: 400;
+				font-size: .8em;
+				padding-left: 7px;
+				padding-right: 7px;
+				padding-top: 4px;
+				padding-bottom: 4px;
+
+			}
+
+			.buttonOne:hover{
+				background-color: #4d4d4d;
+				border: 2px solid #4d4d4d;
+    			color: white;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.paddingTop {
+				padding-top: -20px;
+				float: top;
+				margin-top: -14px;
+				
+			}
+
 		</style>
 	</head>
 
@@ -303,7 +370,17 @@
     						<span class="cells">Users enter UofT courses they have <br>
     						taken and the tool suggests other courses to take. <br>
     						HTML/CSS/JS</span><br>
-    						<a href="http://www.jakecooper.me/"><img class="gitImage" alt="GitHub Repository" src="PNG/GitHub-Mark-64px.png"></a>
+    						<a href="https://github.com/Frank-K/course-finder" target="_blank">
+    							<span class="cf">
+    								<img class="bottom" src="PNG/GitHub-Mark-64px-white.png">
+    								<img class="top" src="PNG/GitHub-Mark-64px.jpg">
+    							</span>
+    						</a>
+    						<div class="paddingTop">
+    							<span class="cells projectLink">
+    								<a href="http://frank-k.github.io/course-finder/" target="_blank" class="siteButton buttonOne">Visit the site</a>
+    							</span>
+    						</div>
     					</td>
     				</tr>
     				<tr>
@@ -313,7 +390,17 @@
     						<span class="cells">Alerts the user when they are about to be rickroll'd.<br>
     						Uses the Chrome API to store the number of links checked.<br>
     						HTML/CSS/JS + Chrome API</span><br>
-    						<img class="gitImage" alt="GitHub Repository" src="PNG/GitHub-Mark-64px.png">
+    						<a href="https://github.com/Frank-K/RickRollMeNot" target="_blank">
+    							<span class="cf">
+    								<img class="bottom" src="PNG/GitHub-Mark-64px-white.png">
+    								<img class="top" src="PNG/GitHub-Mark-64px.jpg">
+    							</span>
+    						</a>
+    						<div class="paddingTop">
+    							<span class="cells projectLink">
+    								<a href="https://chrome.google.com/webstore/detail/rickrollmenot/encfcicfiabmdmfomelgfjhmigjpnodi" target="_blank" class="siteButton buttonOne">Chrome web store page</a>
+    							</span>
+    						</div>
     					</td>
     				</tr>
     				<tr>
@@ -323,7 +410,17 @@
     						<span class="cells">Searches for course codes in r/UofT and posts<br>
     						course names with descriptions.<br>
     						Python + PRAW API</span><br>
-    						<img class="gitImage" alt="GitHub Repository" src="PNG/GitHub-Mark-64px.png">
+    						<a href="https://github.com/Frank-K/CourseCodeBot" target="_blank">
+    							<span class="cf">
+    								<img class="bottom" src="PNG/GitHub-Mark-64px-white.png">
+    								<img class="top" src="PNG/GitHub-Mark-64px.jpg">
+    							</span>
+    						</a>
+    						<div class="paddingTop">
+    							<span class="cells projectLink">
+    								<a href="https://www.reddit.com/user/CourseCodeBot/" target="_blank" class="siteButton buttonOne">Reddit post overview</a>
+    							</span>
+    						</div>
     					</td>
     				</tr>
     			</table>
