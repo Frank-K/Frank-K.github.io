@@ -19,12 +19,12 @@
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
 					
-					anchors: ['Home', 'Intro', 'Academics', 'Projects'],
+					anchors: ['Home', 'Intro', 'Academics', 'Projects', 'Projects2'],
 					menu: '#menu',
 					scrollingSpeed: 800,
 					navigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['Home', 'Intro', 'Academics', 'Projects'],
+					navigationTooltips: ['Home', 'Intro', 'Academics', 'Projects', 'Projects2'],
 
 					onLeave: function(index, nextIndex, direction){
 						var leavingSection = $(this);
@@ -43,12 +43,20 @@
 							$('#star').addClass('animated fadeInUpBig');
 						} else if (index == 3 && nextIndex == 4){
 							$('#seven').addClass('animated fadeInDownBig');
+
 							$('#img1').addClass('animated fadeInLeftBig');
 							$('#text1').addClass('animated fadeInRightBig');
+							
 							$('#img2').addClass('animated fadeInLeftBig').css('animation-delay', '.25s');
 							$('#text2').addClass('animated fadeInRightBig').css('animation-delay', '.25s');
+							
 							$('#img3').addClass('animated fadeInLeftBig').css('animation-delay', '.5s');
 							$('#text3').addClass('animated fadeInRightBig').css('animation-delay', '.5s');
+						} else if (index == 4 && nextIndex == 5){
+							$('eight').addClass('animated fadeInDownBig');
+
+							$('#img4').addClass('animated fadeInLeftBig');
+							$('#text4').addClass('animated fadeInRightBig');
 						}
 					}
 				});
@@ -385,12 +393,32 @@
     			<h1 id="seven" class="title">Projects</h1>
     			<table class="center" style="text-align: left;">
     				<tr>
-    					<td id="img1"><img src="project1.png" class="images2" align="right"></td>
+    					<td id="img1"><img src="project4.png" class="images2" align="right"></td>
     					<td id="text1" style="padding-left: 20px;">
+    						<span class="subTitle"><b>Syllabi Supply</b> - Website</span><br>
+    						<span class="cells">A collection of University of Toronto course syllabi<br>
+    						for students to look at before they enroll in a course.<br>
+    						HTML/CSS/JavaScript/jQuery</span><br>
+    						<a href="https://github.com/Frank-K/Syllabi-Supply" target="_blank">
+    							<span class="cf">
+    								<img class="bottom" src="PNG/GitHub-Mark-64px-white.png">
+    								<img class="top" src="PNG/GitHub-Mark-64px.jpg">
+    							</span>
+    						</a>
+    						<div class="paddingTop">
+    							<span class="cells projectLink">
+    								<a href="https://frank-k.github.io/Syllabi-Supply" target="_blank" class="siteButton buttonOne">Visit the site</a>
+    							</span>
+    						</div>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td id="img2"><img src="project1.png" class="images2" align="right"></td>
+    					<td id="text2" style="padding-left: 20px;">
     						<span class="subTitle"><b>build upon</b> - Website</span><br>
     						<span class="cells">Users enter UofT courses they have <br>
     						taken and the tool suggests other courses to take. <br>
-    						HTML/CSS/JS</span><br>
+    						HTML/CSS/JavaScript</span><br>
     						<a href="https://github.com/Frank-K/course-finder" target="_blank">
     							<span class="cf">
     								<img class="bottom" src="PNG/GitHub-Mark-64px-white.png">
@@ -400,26 +428,6 @@
     						<div class="paddingTop">
     							<span class="cells projectLink">
     								<a href="http://frank-k.github.io/course-finder/" target="_blank" class="siteButton buttonOne">Visit the site</a>
-    							</span>
-    						</div>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td id="img2"><img src="project22.png" class="images2" align="right"></td>
-    					<td id="text2" style="padding-left: 20px;">
-    						<span class="subTitle"><b>RickRollMeNot</b> - Chrome Extension</span><br>
-    						<span class="cells">Alerts the user when they are about to be rickroll'd.<br>
-    						Uses the Chrome API to store the number of links checked.<br>
-    						HTML/CSS/JS + Chrome API</span><br>
-    						<a href="https://github.com/Frank-K/RickRollMeNot" target="_blank">
-    							<span class="cf">
-    								<img class="bottom" src="PNG/GitHub-Mark-64px-white.png">
-    								<img class="top" src="PNG/GitHub-Mark-64px.jpg">
-    							</span>
-    						</a>
-    						<div class="paddingTop">
-    							<span class="cells projectLink">
-    								<a href="https://chrome.google.com/webstore/detail/rickrollmenot/encfcicfiabmdmfomelgfjhmigjpnodi" target="_blank" class="siteButton buttonOne">Chrome web store page</a>
     							</span>
     						</div>
     					</td>
@@ -446,6 +454,33 @@
     				</tr>
     			</table>
     		</div>
+    		
+    		<div class="section">
+				<h1 id="eight" class="title">Projects cont.</h1>
+    			<table class="center" style="text-align: left;">
+    				<tr>
+    					<td id="img4"><img src="project22.png" class="images2" align="right"></td>
+    					<td id="text4" style="padding-left: 20px;">
+    						<span class="subTitle"><b>RickRollMeNot</b> - Chrome Extension</span><br>
+    						<span class="cells">Alerts the user when they are about to be rickroll'd.<br>
+    						Uses the Chrome API to store the number of links checked.<br>
+    						HTML/CSS/JavaScript + Chrome API</span><br>
+    						<a href="https://github.com/Frank-K/RickRollMeNot" target="_blank">
+    							<span class="cf">
+    								<img class="bottom" src="PNG/GitHub-Mark-64px-white.png">
+    								<img class="top" src="PNG/GitHub-Mark-64px.jpg">
+    							</span>
+    						</a>
+    						<div class="paddingTop">
+    							<span class="cells projectLink">
+    								<a href="https://chrome.google.com/webstore/detail/rickrollmenot/encfcicfiabmdmfomelgfjhmigjpnodi" target="_blank" class="siteButton buttonOne">Chrome web store page</a>
+    							</span>
+    						</div>
+    					</td>
+    				</tr>
+    			</table>
+
+			</div>
 		</div>
 
 		<div id = 'fp-nav' class = 'right'>
