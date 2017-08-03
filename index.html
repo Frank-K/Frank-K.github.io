@@ -26,10 +26,18 @@
 					scrollingSpeed: 800,
 					navigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['Home', 'Intro', 'Academics', 'Projects', 'Projects2'],
+					navigationTooltips: ['Home', 'Intro', 'Academics', 'Projects', 'More Projects'],
 
 					onLeave: function(index, nextIndex, direction){
 						var leavingSection = $(this);
+
+						if (index == 1 && nextIndex != 1){
+							$('#fp-nav ul li a span').css('background', '#333');
+							$('#fp-nav ul li .fp-tooltip').css('color', '#333');
+						} else if (index != 1 && nextIndex == 1){
+							$('#fp-nav ul li a span').css('background', 'white');
+							$('#fp-nav ul li .fp-tooltip').css('color', 'white');
+						}
 
 						if(index == 1 && nextIndex == 2){
 							$('#one, #two, #three').addClass('animated fadeInDownBig');
@@ -330,6 +338,16 @@
 
 			}
 
+			#fp-nav ul li a span {
+				background: white;
+			}
+
+			#fp-nav ul li .fp-tooltip {
+				color: white;
+			}
+
+
+
 		</style>
 	</head>
 
@@ -362,7 +380,7 @@
     			<p id='three'class="copy"> If you want to talk, send me an email at frank.karunaratna@gmail.com.</p>
     			
     			<img id='me' src="me2.png">
-    			<p  id='four' class="subTitle"><b>I am also looking for an internship for Summer 2017. If you are interested in hiring me please take a look at my portfolio below.</b></p>
+    			<p  id='four' class="subTitle"><b>I am also looking for an internship for Summer 2018. If you are interested in hiring me please take a look at my portfolio below.</b></p>
     		</div>
     		<div class="section">
     			<h1 id='five' class="title">Academics</h1>
@@ -531,7 +549,7 @@
     					</td>
     				</tr>
     				<tr>
-    					<td id="img5"><img src="placeholder.jpg" class="images2" align="right"></td>
+    					<td id="img5"><img src="project5_2.png" class="images2" align="right"></td>
     					<td id="text5" class="projectDescription" style="padding-left: 20px;">
     						<span class="subTitle"><b>Prof Rates</b> - Chrome Extension</span><br>
     						<span class="cells">Integrates professor rates into the Arts and Science course finder.<br>
@@ -546,7 +564,7 @@
     					</td>
     				</tr>
     				<tr>
-    					<td id="img6"><img src="placeholder.jpg" class="images2" align="right"></td>
+    					<td id="img6"><img src="project6.png" class="images2" align="right"></td>
     					<td id="text6" class="projectDescription" style="padding-left: 20px;">
     						<span class="subTitle"><b>Frank Shell</b> - Linux Shell</span><br>
     						<span class="cells">A personal shell for linux.<br>
