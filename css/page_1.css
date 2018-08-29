@@ -1,0 +1,71 @@
+.homePage {
+	background-image: url(../background_45o_50.png);
+	background-position: center;
+}
+
+#hello {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 2.8rem;
+	margin-bottom: 1%;
+	color: white;
+}
+
+#name {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 6rem;
+	margin-top: 0;
+	margin-bottom: 0.5%;
+	color: white;
+}
+
+#underline {
+	text-decoration: underline;
+	white-space: pre;
+	margin-top: -3.5%;
+	margin-bottom: 0;
+	color: white;
+}
+
+#student {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.7rem;
+	margin-top: 0.8%;
+	color: white;
+}
+
+#button {
+	background-color: none;
+	color: white;
+	border: 2px solid white;
+	padding: 16px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	cursor: pointer;
+
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	text-decoration: none;
+	font-style: bold;
+
+	width: 105px;
+}
+
+#button:hover {
+	background-color: none;
+	border: 2px solid #b3b3b3;
+	color: #b3b3b3;
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
