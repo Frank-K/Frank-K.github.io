@@ -1,0 +1,41 @@
+.images2 {
+	width: 75%;
+}
+
+.projectDescription{
+	width: 353px;
+	padding-right: 109px;
+}
+
+.githubLogo {
+	width: 60px;
+	height: 25px;
+	border: 2px solid #ffffff;
+}
+
+.githubLogo:hover{
+	border: 2px solid black;
+	color: white;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;	
+}
+
+a {
+	text-decoration: none;
+
+}
+
+.desktopLogo {
+	width: 25px;
+	height: 25px;
+	border: 2px solid #ffffff;
+}
+
+.desktopLogo:hover{
+	border: 2px solid black;
+	color: white;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;	
+}
