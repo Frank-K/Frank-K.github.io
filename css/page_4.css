@@ -2,6 +2,12 @@
 	width: 75%;
 }
 
+.project_subTitle {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.1rem;
+}
+
 .projectDescription{
 	width: 353px;
 	padding-right: 109px;
